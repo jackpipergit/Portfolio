@@ -542,11 +542,11 @@ footer {
  
 .connect-image {
     max-width: 275px;
-    height: auto;
+    height: 275px;
     border-radius: 8px;
 }
 
-/* Media Queries */
+/* Media Queries  */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2rem;
