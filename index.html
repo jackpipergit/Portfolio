@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Head-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Piper | Full Stack Developer</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="stylesheet/portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<!--Body-->
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content section-content">
+            <h2>Hi, I'm Jack Piper</h2>
+            <h1>Full Stack Developer</h1>
+            <p class="hero-text" id="typewriter"></p>
+            <div class="hero-cta">
+                <a href="#work" class="primary-btn">View My Work</a>
+                <a href="#contact" class="secondary-btn">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-content">
+            <h3 class="about-title">About Me</h3>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        With 5-6 years of experience in IT and Web Development, I specialise in creating
+                        scalable enterprise solutions. My expertise spans across full-stack development,
+                        system integration, and business intelligence.
+                    </p>
+                    <div class="expertise-list">
+                        <div class="expertise-item">
+                            <h4>Enterprise Solutions</h4>
+                            <p>Development of company portals and warehouse management systems</p>
+                        </div>
+                        <div class="expertise-item">
+                            <h4>E-commerce</h4>
+                            <p>Management of multiple successful Magento platforms</p>
+                        </div>
+                        <div class="expertise-item">
+                            <h4>Business Intelligence</h4>
+                            <p>Creation of analytics dashboards and SAP Business One integration</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/data-maintenance.png" alt="Jack Piper">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="section-content">
+            <div class="cta-container">
+                <div class="cta-card github">
+                    <img src="images/coding.png" alt="Coding Icon" width="200" height="200">
+                    <h4>View My Projects</h4>
+                    <p>Explore my latest projects and code repositories</p>
+                    <a href="https://github.com/jackpiper" target="_blank" class="cta-btn">Visit GitHub</a>
+                </div>
+                <div class="cta-card hire">
+                    <img src="images/hire.png" alt="Coding Icon" width="200" height="200">
+                    <h4>Hire Me</h4>
+                    <p>Looking for a skilled developer for your next project?</p>
+                    <a href="#contact" class="cta-btn">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="work">
+        <div class="section-content">
+            <h3>Selected Work</h3>
+            <div class="work-grid">
+                <div class="work-item">
+                    <h4>Employee Portal</h4>
+                    <p>A comprehensive system for managing employee leave and attendance</p>
+                    <div class="tech-stack">
+                        <span>Laravel</span>
+                        <span>MySQL</span>
+                        <span>PHP</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <h4>Warehouse Management</h4>
+                    <p>Integrated system for inventory and manufacturing management</p>
+                    <div class="tech-stack">
+                        <span>Laravel</span>
+                        <span>Livewire</span>
+                        <span>SAP B1</span>
+                        <span>Saltbox</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <h4>Analytics Dashboard</h4>
+                    <p>Business intelligence solution for real-time insights</p>
+                    <div class="tech-stack">
+                        <span>Filament</span>
+                        <span>Laravel</span>
+                        <span>SAP B1</span>
+                        <span>API's</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-content">
+            <h3>Get in Touch</h3>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                    </div>
+                    <button type="submit" class="primary-btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-header">
+                        <img src="images/connect.png" alt="Connect with me" class="connect-image">
+                    </div>
+                    <div class="contact-links">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:jpiper@redacted.co.uk">jpiper@redacted.co.uk</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">GitHub</span>
+                                <a href="https://github.com/jackpiper" target="_blank">github.com/jackpiper</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">LinkedIn</span>
+                                <a href="https://linkedin.com/in/jackpiper"
+                                    target="_blank">linkedin.com/in/jackpiper</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Jack Piper. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
