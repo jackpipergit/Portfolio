@@ -4,8 +4,8 @@ This is a display of sample websites that I made using HTML and CSS.
 
 ## Projects
 
-* [Space Station Site](Space_Station_Site)
-* [Movie Theater Site](Movie_Theater_Site)
+* [Space Station Site](https://github.com/jackpipergit/HTML-and-CSS-Projects/tree/master/project)
+* [Movie Theater Site](https://github.com/jackpipergit/HTML-and-CSS-Projects/tree/master/bootstrap4_project) 
 
 ### Space Station Site
 
