@@ -1,4 +1,4 @@
-/* Colors and stuff I use everywhere */
+/* Global Variables */
 :root {
     --primary: #2563eb;
     --primary-dark: #1d4ed8;
@@ -9,19 +9,17 @@
     --border: #e2e8f0;
 }
 
-/* Basic reset - keeps things consistent */
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Smooth scrolling - makes the page feel nice */
 html {
     scroll-behavior: smooth;
 }
 
-/* Main styles - fonts and colors */
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--text);
@@ -29,7 +27,7 @@ body {
     background-color: var(--background);
 }
 
-/* Text styles - keeping these together */
+/* Typography */
 h1, h2, h3, h4 {
     font-weight: 700;
     line-height: 1.2;
@@ -60,7 +58,7 @@ p {
     margin-bottom: 0;
 }
 
-/* Nav stuff - floating nav with blur effect */
+/* Navigation */
 .navbar {
     position: fixed;
     top: 0.75rem;
@@ -135,7 +133,7 @@ p {
     }
 }
 
-/* Main sections - basic layout stuff */
+/* Section Components */
 section {
     padding: 6rem 2rem;
     opacity: 0;
@@ -160,7 +158,7 @@ section.hero {
     margin: 0 auto;
 }
 
-/* Hero section - got this nice blur effect going */
+/* Hero Section */
 .hero {
     position: relative;
     background-image: url(../images/hero.jpg);
@@ -226,7 +224,7 @@ section.hero {
     gap: 1rem;
 }
 
-/* Buttons - reusing these everywhere */
+/* Button Components */
 .primary-btn,
 .secondary-btn {
     display: inline-block;
@@ -258,7 +256,7 @@ section.hero {
     color: var(--text);
 }
 
-/* About section - grid layout */
+/* About Section */
 .about-grid {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -277,7 +275,7 @@ section.hero {
     width: 100%;
 }
 
-/* Work section - project cards */
+/* Work Section */
 .work-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -310,7 +308,7 @@ section.hero {
     color: var(--text-light);
 }
 
-/* Contact section - form and info */
+/* Contact Section */
 .contact {
     background-color: #f8f9fa;
     padding: 5rem 0;
@@ -522,7 +520,7 @@ footer {
     background-color: #3558c4;
 }
 
-/* Cool animations */
+/* Animations */
 @keyframes blink {
     0% { border-color: transparent }
     50% { border-color: #777 }
@@ -548,7 +546,7 @@ footer {
     border-radius: 8px;
 }
 
-/* Mobile stuff - all media queries together */
+/* Media Queries */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2rem;
