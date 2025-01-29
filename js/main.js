@@ -121,6 +121,110 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial run
     updateNav();
     checkScroll();
+
+    // Back to top functionality
+    const backToTop = document.querySelector('.back-to-top');
+
+    window.addEventListener('scroll', () => {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        if (window.scrollY > heroBottom) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    });
+
+    // Modal functionality
+    const contactPill = document.querySelector('.contact-pill');
+    const modal = document.querySelector('.modal');
+    const modalClose = document.querySelector('.modal-close');
+    const modalOverlay = document.querySelector('.modal-overlay');
+
+    function openModal() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Re-enable scrolling
+    }
+
+    contactPill.addEventListener('click', openModal);
+    modalClose.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
+
+    // Close modal on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    // Form handling
+    const form = document.getElementById('contactForm');
+
+    // Remove HTML5 validation to use custom validation
+    form.querySelectorAll('input, textarea').forEach(field => {
+        field.removeAttribute('required');
+    });
+
+    function validateField(field) {
+        const formGroup = field.parentElement;
+        const errorMessage = formGroup.querySelector('.error-message');
+        
+        if (!field.value.trim()) {
+            formGroup.classList.add('error');
+            errorMessage.textContent = `${field.placeholder} is required`;
+            return false;
+        }
+
+        if (field.type === 'email' && !isValidEmail(field.value)) {
+            formGroup.classList.add('error');
+            errorMessage.textContent = 'Please enter a valid email address';
+            return false;
+        }
+
+        formGroup.classList.remove('error');
+        errorMessage.textContent = '';
+        return true;
+    }
+
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // Clear errors when user types
+    form.querySelectorAll('input, textarea').forEach(field => {
+        field.addEventListener('input', () => {
+            const formGroup = field.parentElement;
+            formGroup.classList.remove('error');
+            formGroup.querySelector('.error-message').textContent = '';
+        });
+    });
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault(); // Always prevent default first
+        
+        // Validate all fields
+        const fields = form.querySelectorAll('input, textarea');
+        let isValid = true;
+        
+        fields.forEach(field => {
+            if (!validateField(field)) {
+                isValid = false;
+            }
+        });
+
+        if (isValid) {
+            // If validation passes, submit the form
+            form.submit();
+            // Close modal after short delay
+            setTimeout(() => {
+                closeModal();
+            }, 100);
+        }
+    });
 });
 
 // Create the Intersection Observer
@@ -164,4 +268,31 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', checkScroll);
     // Run once on page load
     checkScroll();
-}); 
+});
+
+// Brand Ticker
+function setupTicker() {
+    const wrapper = document.querySelector('.ticker-wrapper');
+    if (!wrapper) return;
+
+    // Clone the ticker items to create a seamless loop
+    const clone = wrapper.cloneNode(true);
+    wrapper.parentElement.appendChild(clone);
+
+    // Pause animation on hover
+    const ticker = document.querySelector('.brand-ticker');
+    ticker.addEventListener('mouseenter', () => {
+        document.querySelectorAll('.ticker-wrapper').forEach(wrap => {
+            wrap.style.animationPlayState = 'paused';
+        });
+    });
+
+    ticker.addEventListener('mouseleave', () => {
+        document.querySelectorAll('.ticker-wrapper').forEach(wrap => {
+            wrap.style.animationPlayState = 'running';
+        });
+    });
+}
+
+// Call the setup function when the page loads
+document.addEventListener('DOMContentLoaded', setupTicker); 
