@@ -541,7 +541,7 @@ footer {
 }
 
 .cta-btn:hover {
-    background: #6a3fbe;
+    background-color: var(--primary-dark);
 }
 
 /* Animations */
